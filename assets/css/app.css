@@ -1,0 +1,15 @@
+@import '~/assets/css/variables.css';
+@import '~/assets/css/globals.css';
+@import '~/assets/css/utils.css';
+@import '~/assets/css/navigations.css';
+.logo-container svg{
+    width:86px !important;
+}
+
+.router-link-exact-active .navbar-text{
+    color:orange !important;
+}
+
+body {
+    font-family: 'Mona Sans', sans-serif;
+}

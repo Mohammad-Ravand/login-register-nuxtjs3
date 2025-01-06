@@ -1,0 +1,41 @@
+.mb-40px {
+    margin-bottom: 40px;
+}
+
+
+.text-14px {
+    font-size: 14px;
+}
+
+.text-15px {
+    font-size: 15px;
+}
+
+.vertical-screen-center {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.h-screen{
+    height: 100vh;
+}
+
+.play-video-screen-column{
+    height: 100vh;
+    min-width: 400px;
+    max-width:400px;
+    padding:0;
+    /*margin-left:-12px;*/
+
+}
+
+.play-video-screen-column video{
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    height: 100%;
+}
+.disabled-pointer{
+    cursor: not-allowed !important;
+}

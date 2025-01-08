@@ -1,9 +1,9 @@
 <script  setup>
 import IconHome from 'assets/icons/icon-home.svg';
+import {logger} from "nuxt-vuefire/runtime/logging.js";
 
 const {$store} = useNuxtApp();
 const isLoggedIn =  $store.getters['auth/isLoggedIn'];
-
 
 </script>
 
@@ -50,14 +50,19 @@ const isLoggedIn =  $store.getters['auth/isLoggedIn'];
 
       <!-- Right aligned nav items -->
       <BNavbarNav class="ms-auto align-items-center mb-lg-0">
-
-        <NuxtLink v-if="isLoggedIn" class="mx-2 d-none d-sm-block text-decoration-none"  to="/auth/register">
+        <NuxtLink v-if="isLoggedIn" class="mx-2 d-none d-sm-block text-decoration-none"  to="/dashboard">
+          <BNavText >Dashboard</BNavText>
+        </NuxtLink>
+        <NuxtLink v-if="!isLoggedIn" class="mx-2 d-none d-sm-block text-decoration-none"  to="/auth/register">
           <BNavText >Sign up</BNavText>
         </NuxtLink>
         <NuxtLink v-else class="mx-2 d-none d-sm-block text-decoration-none"  to="/auth/logout">
           <BNavText >Log out</BNavText>
         </NuxtLink>
-        <NuxtLink v-if="isLoggedIn" class="mx-2 text-decoration-none" to="/auth/login">
+
+
+
+        <NuxtLink v-if="!isLoggedIn" class="mx-2 text-decoration-none" to="/auth/login">
           <BNavText >
             <BBadge class="py-3 px-4 rounded-5" variant="dark">login</BBadge>
           </BNavText>

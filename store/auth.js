@@ -22,9 +22,7 @@ const authModule = {
             state.user = null
             console.log('logout mutation is running',state.user,state.token)
         },
-        isLoggedIn(state) {
-            return state.user !=null;
-        }
+
 
     },
     actions: {  },
@@ -34,6 +32,9 @@ const authModule = {
         },
         getToken(state) {
             return state.token
+        },
+        isLoggedIn(state) {
+            return state.user !=null;
         }
     }
 }

@@ -41,7 +41,7 @@ const [password, passwordAttrs] = defineField('password', {
 
 const submit = handleSubmit(async (values) => {
   const res = await loginUser(values.email, values.password)
-  let notifyMessage = res ? 'registered successfully' : 'error register user';
+  let notifyMessage = res ? 'loggedin successfully' : 'error login user';
 
   if (res == true) {
     toast.success(notifyMessage, {
@@ -68,7 +68,6 @@ function getStateInput(name) {
   return (errorValue && errorValue.length > 0) ? false : true;
 
 }
-
 
 </script>
 

@@ -4,6 +4,7 @@
 @import '~/assets/css/navigations.css';
 .logo-container svg{
     width:86px !important;
+    height:50px;
 }
 
 .router-link-exact-active .navbar-text{
